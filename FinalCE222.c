@@ -1,15 +1,15 @@
 #include <stdio.h>
 #include <stdbool.h>
+#include <windows.h>
 
 #define Emission_Factor_Rice 4.5
 #define Emission_Factor_Meat 30
 #define Emission_Factor_Veg_Fruit 1
 #define CHARGES_PER_KGCO2 121.7 
 
-void max()
-{}
 int main()
-{
+{   
+    SetConsoleOutputCP(CP_UTF8);
     int Genre = 0;
     int ChoiceHowWaste = 0;
     float User_Waste = 0;
@@ -53,8 +53,7 @@ int main()
                         printf("[1] Rice/Flour (60 Bath/Kg)\n");
                         printf("[2] Meat (200 Bath/Kg)\n");
                         printf("[3] Veg/Fruit (50 Bath/kg)\n");
-                        printf("[0] Exit / Finish\n");
-                        
+                        printf("[0] Exit / Finish\n");                        
                         printf("What is your food genre : ");
                         scanf("%d",&Genre);
 
