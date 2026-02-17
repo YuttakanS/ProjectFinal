@@ -26,7 +26,7 @@ int main()
 
                                                                                                                                                                                                                                                                                             
     while (true){
-            
+            printf("========================\n");
             printf("Welcome to Super Program \n");
             printf("Two in One\n");
             printf("Please select yor program\n");
