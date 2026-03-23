@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <stdbool.h>
-#include <windows.h>
+
 
 #define Emission_Factor_Rice 4.5
 #define Emission_Factor_Meat 30
@@ -9,7 +9,7 @@
 
 int main()
 {   
-    SetConsoleOutputCP(CP_UTF8);
+    
     int Genre = 0;
     int ChoiceHowWaste = 0;
     float User_Waste = 0;
