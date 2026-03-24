@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <stdbool.h>
-
+#include <windows.h>
 
 #define Emission_Factor_Rice 4.5
 #define Emission_Factor_Meat 30
@@ -9,14 +9,12 @@
 
 int main()
 {   
-    
+    SetConsoleOutputCP(CP_UTF8);
     int Genre = 0;
-    int ChoiceHowWaste = 0;
+    int ChoiceZero = 0;
     float User_Waste = 0;
-    float Totalwaste = 0;    
-    float TotalMoney = 0;    
+    float Totalwaste = 0;       
     float current_weight = 0;
-    float Total_Current_Weight = 0;
     float price_per_kg = 0;
     float curent_money_waste = 0;
     float cabonfootprint =0;
@@ -75,6 +73,7 @@ int main()
                                 switch (Genre)
                                 {
                                     case 1:{
+                                        printf("================================= \n");
                                         printf("You have selected [Rice/Flour]\n");
                                         printf("How much did you throw away? (Kg) \n");
                                         printf("If you dont know type [0]\n");
@@ -86,8 +85,8 @@ int main()
                                                 printf("[3] 50 percent of plate\n");
                                                 printf("[4] 20 percent of plate\n");
 
-                                                scanf("%d",&ChoiceHowWaste);
-                                                    switch (ChoiceHowWaste){
+                                                scanf("%d",&ChoiceZero);
+                                                    switch (ChoiceZero){
                                                         case 1:
                                                             price_per_kg = 70;
                                                             current_weight = 0.5; 
@@ -138,8 +137,8 @@ int main()
                                                 printf("[3] 50 percent of plate\n");
                                                 printf("[4] 20 percent of plate\n");
 
-                                                scanf("%d",&ChoiceHowWaste);
-                                                    switch (ChoiceHowWaste){
+                                                scanf("%d",&ChoiceZero);
+                                                    switch (ChoiceZero){
                                                         case 1:
                                                             price_per_kg = 150;
                                                             current_weight = 0.2; 
@@ -189,8 +188,8 @@ int main()
                                                 printf("[3] 50 percent of plate\n");
                                                 printf("[4] 20 percent of plate\n");
 
-                                                scanf("%d",&ChoiceHowWaste);
-                                                    switch (ChoiceHowWaste){
+                                                scanf("%d",&ChoiceZero);
+                                                    switch (ChoiceZero){
                                                         case 1:
                                                             price_per_kg = 40;
                                                             current_weight = 0.4; 
@@ -239,13 +238,13 @@ int main()
             printf(" ║                FINAL WASTE ANALYSIS                  ║\n");
             printf(" ╠══════════════════════════════════════════════════════╣\n");
             printf(" ║  Total Food Waste     :   %6.2f Kg                  ║\n", Totalwaste);
-            printf(" ║  Financial Loss       :   %6.2f THB                 ║\n", curent_money_waste);
+            printf(" ║  Financial Loss       :   %6.2f THB                ║\n", curent_money_waste);
             printf(" ║  Carbon Footprint     :   %6.2f kgCO2e              ║\n", cabonfootprint);
             printf(" ╠══════════════════════════════════════════════════════╣\n");
             printf(" ║  [ compare ]                                         ║\n");
             printf(" ║  Your waste equals to the CO2 absorption of          ║\n");           
             printf(" ║  >> %6.1f small plants per year!                    ║\n", cabonfootprint / 0.5);
-            printf(" ║  Charging a smartphone %6.0f times                   ║\n", cabonfootprint * CHARGES_PER_KGCO2);
+            printf(" ║  Charging a smartphone %6.0f times                 ║\n", cabonfootprint * CHARGES_PER_KGCO2);
             printf(" ╚══════════════════════════════════════════════════════╝\n");
 	        printf("\n");
             printf(" ╔══════════════════════════════════════════════════════╗\n");
@@ -287,7 +286,7 @@ int main()
             break;
         
         /*===============================================================================================================================================*/
-        
+        /*===================================Program 2 start here===========================================*/
                 case 2:
                             printf("░▒▓███████▓▒░░▒▓██████████████▓▒░       ░▒▓████████▓▒░▒▓█▓▒░░▒▓██████▓▒░░▒▓█▓▒░░▒▓█▓▒░▒▓████████▓▒░▒▓████████▓▒░▒▓███████▓▒░\n");
                             printf("░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░░▒▓█▓▒░      ░▒▓█▓▒░      ░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░  ░▒▓█▓▒░   ░▒▓█▓▒░      ░▒▓█▓▒░░▒▓█▓▒░\n");
@@ -354,7 +353,6 @@ int main()
                             }
                             
                                                      
-                            
                             
                             printf("\n");
                             printf(" ╔══════════════════════════════════════════════════════╗\n");
