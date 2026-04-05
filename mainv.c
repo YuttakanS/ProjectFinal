@@ -95,6 +95,8 @@ void run_food_waste_calculator(void){
             return;
         default:
             printf("Invalid option. Please try again.\n");
+            printf("try again after 3 seconds...\n");
+            Sleep(3000);
         }
     }
 }
