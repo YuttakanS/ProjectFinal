@@ -51,6 +51,7 @@ int main(){
             case 3: run_tax_calculator();        break;
             case 0:
                 printf("Exiting...\n");
+                printf("Goodbye!\n");
                 Sleep(2000);
                 return 0;
             default:
